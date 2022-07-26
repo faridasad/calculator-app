@@ -1,5 +1,4 @@
 const output = document.querySelector(".output")
-
 const buttons = document.querySelectorAll("button")
 
 let isFinished = false
@@ -28,5 +27,17 @@ buttons.forEach((button) => {
             default:
                 output.textContent += e.target.textContent
         }
+    })
+})
+
+
+/* Theme stuff */
+
+const themes = document.querySelectorAll(".theme")
+const body = document.querySelector("body")
+
+themes.forEach((theme) => {
+    theme.addEventListener("click", () => {
+        body.setAttribute("data-theme", theme.dataset.id)
     })
 })
